@@ -1,0 +1,18 @@
+#controls {
+  padding: 15px;
+  top: 30px;
+  left: 65px;
+  bottom: auto;
+
+  height: auto;
+  width: auto;
+  
+  opacity: 0.45;
+  transition: opacity 500ms 1s;
+}
+
+#controls:hover {
+  /* Fade in while hovering */
+  opacity: 1;
+  transition-delay: 0;
+}

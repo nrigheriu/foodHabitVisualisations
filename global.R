@@ -1,0 +1,12 @@
+library(shiny)
+library(leaflet)
+library(RColorBrewer)
+library(shinythemes)
+library(plotly)
+library(rgdal)
+library(ggplot2)
+library(ggthemes)
+
+csvFile = read.csv("groceries_years.csv")
+csvFile = subset(csvFile, select = c(Country, Item, Year, Value))
+foodPercentiles = read.csv("foodpopPercentiles.csv")
