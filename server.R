@@ -200,9 +200,8 @@ shinyServer(function(input, output, session){
       timelinePlot =  ggplot(data = timelineData,
                              aes(x = timelineData$Year, y = timelineData$Value,
                                 by = timelineData$Country, color = timelineData$Country,
-                                shape = timelineData$Item, frame = frame))  + geom_line() +
-          geom_point(aes(size = 4, shape=timelineData$Item))
-      #timelinePlot = timelinePlot
+                                shape = timelineData$Item))#, frame = frame))  
+      timelinePlot = timelinePlot + geom_line() + geom_point(size=4)
       timelinePlot = timelinePlot + labs(x = "Year", y = "Kilos per year per person", title = "Consumption") 
       timelinePlot = timelinePlot + scale_color_hue("Legend", l = 70, c = 130) + ggthemes::theme_few()
   })
